@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>803901030871-6f9cb1njffbmvvokik55f90d77dblsig.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.803901030871-6f9cb1njffbmvvokik55f90d77dblsig</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDXCXyL6TTzfb4DehR5hwGJYyVkungyOT4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>803901030871</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>vagan.co.VKR-Swift</string>
+	<key>PROJECT_ID</key>
+	<string>vkrswiftui-d9619</string>
+	<key>STORAGE_BUCKET</key>
+	<string>vkrswiftui-d9619.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:803901030871:ios:6fb41371f3ffd26f358b92</string>
+</dict>
+</plist>
