@@ -31,16 +31,13 @@ struct ContentView: View {
     }
 
 
-//Тест изменение для комита
-    
-    
     
 struct Home : View {
     
     var body : some View{
         
         VStack{
-            
+            // обратиться к селект вью и сделать в нём кнопку выхода
             Text("Home")
             Button(action: {
                 UserDefaults.standard.set(false, forKey: "status")
@@ -56,8 +53,8 @@ struct Home : View {
 
 
 struct SingIn : View {
-    @State var student = false
-    @State var company = false
+  //  @State var student = false
+  //  @State var company = false
     @State var user = ""
     @State var pass = ""
     @State var messege = ""
@@ -208,6 +205,8 @@ struct SignUp : View {
 
 
 //MARK
+
+
     func singInWithEmail(email: String, password: String, completion: @escaping(Bool,String) -> Void){
         Auth.auth().signIn(withEmail:email, password: password) {(res,err) in
             if err != nil{
