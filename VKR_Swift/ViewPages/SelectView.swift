@@ -5,6 +5,9 @@
 //  Created by Vagan Albertyan on 10.10.2022.
 //
 
+
+// Создаю отдельно макеты, в вью который возвращаю обращаюсь к этим вью чтоб их выводить
+
 import SwiftUI
 
 struct HomeView: View {
@@ -32,8 +35,10 @@ struct HomeView: View {
                 
                 ForEach(jobs, id: \.id) { job in
                     JobSmallCardView(job: job)
-                }
+                    
 
+                }
+                LogOut()
             }
             
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
@@ -110,7 +115,7 @@ struct CategoryListView: View { // выбор категорий
                         .padding(.vertical, 5)
                         .background(Color.blue)
                         .clipShape(Capsule())
-                        .animation(.easeInOut)
+                        //.animation(.easeInOut) //  анимация не нужна пока не прикручена кнопка
                         .onTapGesture {
                             self.selectedCategory = category
                     }
@@ -137,30 +142,31 @@ struct JobSmallCardView: View {
             Image(uiImage: job.image)
         }
         .padding(.all)
-        .background(Color(job.bgColor))
+        .background(Color.blue.opacity(0.1))
         .cornerRadius(25)
         .padding(.horizontal)
-        .padding(.vertical, 5)
+      //  .padding(.vertical, 5)
     }
 }
 
 // вывести снизу логаут
-struct LogOut: View{
-    var Contetnview:ContentView
+ struct LogOut: View{
+//     @Binding var Contetnview:ContentView
     var body: some View{
-        VStack{
-            Text("Home")
+        HStack {
+            VStack  {
+            Spacer()
             Button(action: {
                 UserDefaults.standard.set(false, forKey: "status")
                 NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
-                
+
             }) {
+                Text("Выход").foregroundColor(Color.gray.opacity(0.5))
                 
-                Text("Выход")
-                (Color.black)
-                
+                }
             }
-        }
+        } .padding(.top, 55)
+          .padding(.horizontal,189)
     }
 }
 

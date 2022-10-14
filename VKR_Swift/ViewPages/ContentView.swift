@@ -11,7 +11,7 @@ struct ContentView: View {
             VStack{
                 
                 if status{
-                    Home()
+                    HomeView() // просто заменить на HomeView
                 }
                 else{
                     SingIn()
@@ -40,7 +40,7 @@ struct Home : View {
             // обратиться к селект вью и сделать в нём кнопку выхода
             Text("Home")
             Button(action: {
-                UserDefaults.standard.set(false, forKey: "status")
+                 UserDefaults.standard.set(false, forKey: "status")
                 NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
                 
             }) {

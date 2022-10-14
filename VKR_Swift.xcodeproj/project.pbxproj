@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B7537A128F9D2D4004208B6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7537A028F9D2D4004208B6 /* Profile.swift */; };
 		6BC5562C28F428A10069E12B /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC5562B28F428A10069E12B /* SelectView.swift */; };
 		6BC5562F28F48D400069E12B /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC5562E28F48D400069E12B /* Job.swift */; };
 		6BC5563128F48D710069E12B /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC5563028F48D710069E12B /* Categories.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B7537A028F9D2D4004208B6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		6BC5562B28F428A10069E12B /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		6BC5562E28F48D400069E12B /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		6BC5563028F48D710069E12B /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				6BE6774B28F2EE2B001185AF /* HomePage.swift */,
 				6BDA9FF228F2C92B00C5ED91 /* ContentView.swift */,
 				6BC5562B28F428A10069E12B /* SelectView.swift */,
+				6B7537A028F9D2D4004208B6 /* Profile.swift */,
 			);
 			path = ViewPages;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				6BDA9FF328F2C92B00C5ED91 /* ContentView.swift in Sources */,
 				6BE6774C28F2EE2B001185AF /* HomePage.swift in Sources */,
 				6BC5562C28F428A10069E12B /* SelectView.swift in Sources */,
+				6B7537A128F9D2D4004208B6 /* Profile.swift in Sources */,
 				6BDA9FF128F2C92B00C5ED91 /* DelegateApp.swift in Sources */,
 				6BC5563328F495F10069E12B /* WelcomeUIView.swift in Sources */,
 				6BC5562F28F48D400069E12B /* Job.swift in Sources */,
