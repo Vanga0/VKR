@@ -29,15 +29,18 @@ struct HomeView: View {
                     .fontWeight(.bold)
                     .padding(.horizontal)
                 
+                
                 JobCardView()
+                
+                //SideMenuView()
                 
                 CategoryListView(selectedCategory: self.$selectedCategory)
                 
-                ForEach(jobs, id: \.id) { job in
-                    JobSmallCardView(job: job)
-                    
-
-                }
+//                ForEach(jobs, id: \.id) { job in
+//                    JobSmallCardView(job: job)
+//
+//
+//                } закоментил тк меняю данные тест списка для коннекта файрстор
                 LogOut()
             }
             
@@ -48,11 +51,11 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
+//struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView()
+//    }
+//}
 
 struct AppBarView: View {
     var body: some View {
@@ -71,7 +74,7 @@ struct AppBarView: View {
         .padding(.bottom)
     }
 }
-
+//MARK: Большая карточка сверху
 struct JobCardView: View {
     var body: some View {
         ZStack (alignment: .bottom) {
@@ -100,7 +103,7 @@ struct JobCardView: View {
         .padding(.bottom)
     }
 }
-
+//MARK: горизонтальное меню работы
 struct CategoryListView: View { // выбор категорий
     
     @Binding var selectedCategory: Category
@@ -125,32 +128,63 @@ struct CategoryListView: View { // выбор категорий
         }
     }
 }
+////MARK: Вывод работы // переделать в LIST
+//struct JobSmallCardView: View {
+//    var job : Job
+//    var body: some View {
+//        HStack {
+//            VStack (alignment: .leading) {
+//                Text(job.title)
+//                    .font(.system(size: 18, weight: .bold))
+//                    .padding(.bottom, 4)
+//               // Text(job.location)// сюда передать данные из файр стора
+//                    .font(.system(size: 14, weight: .medium))
+//                    .foregroundColor(Color.blue.opacity(0.54)) //opacity- прозрачность
+//            }
+//            Spacer()
+//            //Image(uiImage: job.image)
+//        }
+//        .padding(.all)
+//        .background(Color.blue.opacity(0.1))
+//        .cornerRadius(25)
+//        .padding(.horizontal)
+//      //  .padding(.vertical, 5)
+//    }
+//}
 
-struct JobSmallCardView: View {
-    var job : Job
-    var body: some View {
-        HStack {
-            VStack (alignment: .leading) {
-                Text(job.title)
-                    .font(.system(size: 18, weight: .bold))
-                    .padding(.bottom, 4)
-                Text(job.location)
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(Color.blue.opacity(0.54)) //opacity- прозрачность
-            }
-            Spacer()
-            Image(uiImage: job.image)
-        }
-        .padding(.all)
-        .background(Color.blue.opacity(0.1))
-        .cornerRadius(25)
-        .padding(.horizontal)
-      //  .padding(.vertical, 5)
-    }
-}
+//// MARK: Боковое меню
+//struct SideMenuView: View {
+//    @State var show = false
+//    var body: some View {
+//        GeometryReader{_ in
+//        NavigationView {
+//            VStack {
+//                Text("Главная страница")
+//            }
+//            .navigationBarTitle("Главная")
+//            .navigationBarItems(leading:
+//                                    Button(action: {self.show.toggle()}, label: {
+//                                        if self.show {
+//                                            Image(systemName: "arrow.left").font(.body).foregroundColor(.black)
+//                                        }
+//                                        else{
+//                                            Image("Menu").renderingMode(.original)
+//                                        }
+//                                        // действие, выполняемое при нажатии на кнопку
+//                                        }){
+//                    Image(uiImage: #imageLiteral(resourceName: "Menu"))
+//                }
+//            )
+//                .offset(x: self.show ? 0 : -UIScreen.main.bounds.width)
+//                .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6))
+//
+//            }
+//        }
+//    }
+//}
 
-// вывести снизу логаут
- struct LogOut: View{
+//MARK: Кнопка выхода
+struct LogOut: View{
 //     @Binding var Contetnview:ContentView
     var body: some View{
         HStack {
@@ -166,7 +200,12 @@ struct JobSmallCardView: View {
                 }
             }
         } .padding(.top, 55)
-          .padding(.horizontal,189)
+          .padding(.horizontal,179)
     }
 }
 
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
+    }
+}

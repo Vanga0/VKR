@@ -39,3 +39,4 @@ struct HomePage_Previews: PreviewProvider {
     }
 }
 
+let screen = UIScreen.main.bounds

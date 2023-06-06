@@ -220,9 +220,11 @@ struct SignUp : View {
 func singUpWithEmail(email: String, password: String, completion: @escaping(Bool,String) -> Void){
     Auth.auth().createUser(withEmail:email, password: password) {(res,err) in
         if err != nil{
+            // обработка ошибки
             completion(false, (err?.localizedDescription)!)
             return
         }
+       // успешная регистрация
         completion(true,(res?.user.email)!)
     }
 }

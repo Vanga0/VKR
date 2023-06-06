@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "4DE61FDD-552A-4F0A-AEC9-D01B3DCAD0AD",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:VKR_Swift.xcodeproj",
+        "identifier" : "6BB64CC72A179F6F0040D586",
+        "name" : "VKR_SwiftUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
